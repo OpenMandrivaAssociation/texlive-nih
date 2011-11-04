@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/nih
+# catalog-date 2007-03-10 12:31:42 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-nih
 Version:	20070310
 Release:	1
@@ -48,6 +54,7 @@ without even the restrictions of the LaTeX licence.).
 %doc %{_texmfdistdir}/doc/latex/nih/example-biosketch.tex
 %doc %{_texmfdistdir}/doc/latex/nih/example-nih-cls.pdf
 %doc %{_texmfdistdir}/doc/latex/nih/example-nih-cls.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ without even the restrictions of the LaTeX licence.).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
