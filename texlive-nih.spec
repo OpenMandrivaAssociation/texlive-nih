@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The nih class offers support for grant applications to NIH, the
@@ -30,20 +28,12 @@ spacing; the package is distributed with the class, but is not
 part of the class proper. (The examples may be distributed
 without even the restrictions of the LaTeX licence.).
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -55,7 +45,6 @@ without even the restrictions of the LaTeX licence.).
 %doc %{_texmfdistdir}/doc/latex/nih/example-biosketch.tex
 %doc %{_texmfdistdir}/doc/latex/nih/example-nih-cls.pdf
 %doc %{_texmfdistdir}/doc/latex/nih/example-nih-cls.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -66,5 +55,3 @@ without even the restrictions of the LaTeX licence.).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
