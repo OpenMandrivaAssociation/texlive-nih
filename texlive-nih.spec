@@ -55,3 +55,17 @@ without even the restrictions of the LaTeX licence.).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070310-2
++ Revision: 754347
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070310-1
++ Revision: 719121
+- texlive-nih
+- texlive-nih
+- texlive-nih
+- texlive-nih
+
