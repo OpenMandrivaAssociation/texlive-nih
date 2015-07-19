@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-nih
 Version:	20070310
-Release:	9
+Release:	10
 Summary:	A class for NIH grant applications
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/nih
