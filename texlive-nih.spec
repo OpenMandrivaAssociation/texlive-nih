@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	A class for NIH grant applications
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/nih
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/nih
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/nih.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/nih.doc.r%{version}.tar.xz
